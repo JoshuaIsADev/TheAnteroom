@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/317c1a67db.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>The Anteroom</title>
+  </head>
+  <body>
+    <header>
+      <div id="welcome-header">
+        <ul>
+          <li>The Anteroom</li>
+          <li>
+            <span id="weather">Current Weather</span>,
+            <span id="display-date">7/26/2023</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section id="gallery">
+        <div class="artwork-img"></div>
+        <div class="artwork-info"></div>
+      </section>
+      <section id="service">
+        <div class="service-search">
+          <h1>Search the web</h1>
+          <div class="search-field">
+            <form
+              method="get"
+              action="https://www.google.com/search"
+              name="searchform"
+              target="_blank"
+              class="search-field"
+              type="text"
+            >
+              <button class="button search">
+                <i
+                  class="fa-solid fa-magnifying-glass fa-sm icon"
+                  type="submit"
+                ></i>
+              </button>
+              <input type="text" name="q" autocomplete="on" />
+            </form>
+          </div>
+        </div>
+        <div class="service-newsfeed">
+          <h1>Today's news</h1>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
