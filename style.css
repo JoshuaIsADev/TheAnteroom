@@ -95,6 +95,7 @@ input:focus {
 #service {
   width: 40%;
   max-width: 60rem;
+  height: 89.3vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -122,7 +123,7 @@ input:focus {
 .service-newsfeed {
   overflow-y: scroll;
   scrollbar-width: none;
-  max-height: 40rem;
+  max-height: auto;
 }
 
 .service-newsfeed::-webkit-scrollbar {

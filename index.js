@@ -44,10 +44,15 @@ showWeather();
 
 const fetchArticles = async () => {
   const resultArticles = await axios.get(
-    "https://newsapi.org/v2/top-headlines?country=us",
+    "https://api.newscatcherapi.com/v2/latest_headlines",
     {
+      headers: {
+        "x-api-key": "m9ZMmrCyp3ZhYtg-d2g5xB7Z_ceyB31yy1s6iVGYee0",
+      },
       params: {
-        apiKey: "2a35fcef6d18485da5ea2a7447075031",
+        countries: "US",
+        lang: "en",
+        topic: "news",
       },
     }
   );
@@ -60,8 +65,8 @@ const showArticles = async () => {
   for (let article of articles) {
     const divArticle = document.createElement("div");
     divArticle.innerHTML = `
-    <h2 class="news-title"><a href ="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h2>
-    <p class="news-summary">${article.description}</p>
+    <h2 class="news-title"><a href ="${article.link}" target="_blank" rel="noopener noreferrer">${article.title}</a></h2>
+    <p class="news-summary">${article.excerpt}</p>
     <br />
     `;
 
